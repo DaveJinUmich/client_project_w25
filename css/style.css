@@ -1,6 +1,4 @@
-/* CSS for Student Success Portal - Mobile First Design */
-
-/* General Styles */
+/* Umich Styles */
 :root {
     --michigan-blue: #00274c;
     --michigan-maize: #ffcb05;
@@ -92,7 +90,6 @@ a:hover, a:focus {
     color: var(--michigan-blue);
 }
 
-/* Navigation */
 nav {
     margin: 1rem 0;
     width: 100%;
@@ -122,7 +119,6 @@ nav ul li a:hover, nav ul li a:focus {
     text-decoration: underline;
 }
 
-/* Active page indicator */
 nav ul li a.active {
     background-color: var(--michigan-maize);
     color: var(--michigan-blue);
@@ -136,7 +132,6 @@ nav ul li a.active::after {
     margin-top: 0.2rem;
 }
 
-/* Main Content */
 main {
     padding: 1rem;
     display: grid;
@@ -148,15 +143,12 @@ section {
     margin-bottom: 2rem;
 }
 
-/* Grid for Home Page */
-/* Welcome section */
 main section:first-of-type {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
 }
 
-/* BSI Advising section */
 main section:nth-of-type(2) {
     display: grid;
     grid-template-columns: 1fr;
@@ -184,7 +176,6 @@ main section:nth-of-type(2) article:last-of-type {
     grid-area: article2;
 }
 
-/* Mental Health section */
 main section:nth-of-type(3) {
     display: grid;
     grid-template-columns: 1fr;
@@ -197,21 +188,18 @@ main section:nth-of-type(3) article {
     gap: 0.5rem;
 }
 
-/* Food Pantry section */
 main section:nth-of-type(4) {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
 }
 
-/* Life Outside Classroom section */
 main section:nth-of-type(5) {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
 }
 
-/* Grid for BSI Advising Page */
 .bsi-advising main section:first-of-type {
     display: grid;
     grid-template-columns: 1fr;
@@ -237,14 +225,12 @@ main section:nth-of-type(5) {
     gap: 1rem;
 }
 
-/* Grid for CAPS Page */
 .caps main section {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
 }
 
-/* Grid for Food Pantry Page */
 .food-pantry main section {
     display: grid;
     grid-template-columns: 1fr;
@@ -258,7 +244,6 @@ main section:nth-of-type(5) {
     gap: 0.5rem;
 }
 
-/* Images */
 figure {
     margin: 1rem 0;
     display: grid;
@@ -309,7 +294,6 @@ a {
 }
 
 @media screen and (min-width: 768px) {
-    /* Header grid */
     header {
         grid-template-columns: auto 1fr;
         align-items: center;
@@ -320,13 +304,11 @@ a {
         margin-right: 1rem;
     }
 
-    /* Navigation */
     nav ul {
         grid-template-columns: repeat(4, 1fr);
         gap: 1rem;
     }
 
-    /* Home page grid layouts */
     main section:nth-of-type(2) {
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
@@ -353,7 +335,6 @@ a {
         grid-column: 1 / -1;
     }
 
-    /* BSI Advising page */
     .bsi-advising main section:nth-of-type(2) {
         grid-template-columns: 1fr 1fr;
     }
@@ -370,7 +351,6 @@ a {
         grid-column: 1 / -1;
     }
 
-    /* CAPS page */
     .caps main section:nth-of-type(2),
     .caps main section:nth-of-type(3) {
         grid-template-columns: 1fr 1fr;
@@ -380,7 +360,6 @@ a {
         grid-column: 1 / -1;
     }
 
-    /* Food Pantry page */
     .food-pantry main section.intro {
         grid-template-columns: 1fr 1fr;
     }
@@ -399,7 +378,6 @@ a {
 }
 
 @media screen and (min-width: 1024px) {
-    /* Home page */
     main section:nth-of-type(3) {
         grid-template-columns: repeat(4, 1fr);
     }
@@ -409,7 +387,6 @@ a {
         grid-column: 1 / -1;
     }
 
-    /* BSI Advising page */
     .bsi-advising main section:nth-of-type(2) {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -418,20 +395,17 @@ a {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    /* CAPS page */
     .caps main section:nth-of-type(2) {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-/* Reduced Motion Media Query */
 @media (prefers-reduced-motion: reduce) {
     * {
         animation: none !important;
         transition: none !important;
     }
     
-    /* Disable any GIFs or animations */
     img[src$=".gif"],
     .animated {
         display: none;
