@@ -304,6 +304,10 @@ footer a:hover, footer a:focus {
     color: #FFCB05;
 }
 
+a {
+    text-decoration: underline;
+}
+
 @media screen and (min-width: 768px) {
     /* Header grid */
     header {
